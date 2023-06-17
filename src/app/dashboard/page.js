@@ -35,31 +35,6 @@ export default function page() {
       url: "www.instagram.com/ajdemarco",
       id: 6,
     },
-    {
-      desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
-      id: 2,
-    },
-    {
-      desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
-      id: 3,
-    },
-    {
-      desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
-      id: 4,
-    },
-    {
-      desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
-      id: 5,
-    },
-    {
-      desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
-      id: 6,
-    },
   ];
   const [userLinks, setUserLinks] = useState(linkArr);
 

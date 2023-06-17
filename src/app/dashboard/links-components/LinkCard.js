@@ -2,7 +2,7 @@ function LinkCard(props) {
   const { link } = props;
 
   return (
-    <div className=" outline-dashed p-3 mb-5 cursor-grab select-none">
+    <div className="bg-base-200 rounded-3xl p-3 mb-5 cursor-grab select-none">
       <div className="link-content flex justify-between items-center">
         <div className="icon">Grab Icon</div>
         <div className="text whitespace-nowrap overflow-hidden  overflow-ellipsis max-w-[20%] ">

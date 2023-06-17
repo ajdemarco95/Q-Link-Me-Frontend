@@ -11,13 +11,13 @@ function RenderPhonePreview(props) {
           <h1>@Username</h1>
           <h3>Add your bio here!</h3>
         </div>
-        <div className="flex flex-col place-content-around my-10">
+        <div className="flex flex-col place-content-around my-10 w-full items-center">
           {props.linkArr &&
             props.linkArr.map((item, index) => {
               return (
                 <button
                   key={index}
-                  className="w-full font-semibold py-2 px-4 border rounded hover:bg-slate-500 mb-3"
+                  className="w-4/5 btn font-semibold py-2 px-4 border rounded  mb-3"
                 >
                   <div>Instagram</div>
                 </button>
