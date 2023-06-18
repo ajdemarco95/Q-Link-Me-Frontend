@@ -5,7 +5,7 @@ function RenderPhonePreview(props) {
     <div className=" bg-slate-500 h-full">
       <div className="flex flex-col justify-center pt-20">
         <div className="w-full flex justify-center">
-          <Image className="rounded-full mb-3" src={profilePic} />
+          <Image alt="avatar" className="rounded-full mb-3" src={profilePic} />
         </div>
         <div className="text-center text-white">
           <h1>@ajdemarco95</h1>

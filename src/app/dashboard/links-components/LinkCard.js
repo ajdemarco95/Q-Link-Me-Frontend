@@ -1,8 +1,9 @@
 import TrashBtn from "./link-card-components/TrashBtn";
 import EditBtn from "./link-card-components/EditBtn";
-import { useState } from "react";
+import SaveBtn from "./link-card-components/SaveBtn";
 function LinkCard(props) {
-  const { link, isEditing } = props;
+  const { link, isEditing, handleEditClick, deleteLink, updateLink, addLink } =
+    props;
 
   return (
     <div className="bg-base-200 rounded-2xl p-3 mb-5  select-none">
@@ -27,25 +28,24 @@ function LinkCard(props) {
           {!isEditing && (
             <input
               type="text"
-              className="w-[80%]"
+              className="w-[80%] input mb-1 input-sm"
               defaultValue={link.linkTitle}
             />
           )}
           {isEditing && (
-            <div className="font-semibold text-lg">{link.linkTitle}</div>
+            <div className="font-semibold text-lg ">{link.linkTitle}</div>
           )}
           <hr className="w-[80%]" />
           {!isEditing && (
             <>
-              <textarea
+              <input
                 defaultValue={link.desc}
-                className="w-[80%]"
-                name=""
-                id=""
-                cols="30"
-                rows="2"
-              ></textarea>
-              <input className="w-[80%]" defaultValue={link.url}></input>
+                className="w-[80%] input mb-1 input-sm"
+              ></input>
+              <input
+                className="w-[80%] input input-sm"
+                defaultValue={link.url}
+              ></input>
             </>
           )}
           {isEditing && (
@@ -116,8 +116,21 @@ function LinkCard(props) {
           </div>
         </div>
         <div className="actions ml-auto">
-          <EditBtn />
-          <TrashBtn />
+          {!isEditing && (
+            <SaveBtn
+              handleEditClick={handleEditClick}
+              index={props.index}
+              isEditing={isEditing}
+            />
+          )}
+          {isEditing && (
+            <EditBtn
+              handleEditClick={handleEditClick}
+              index={props.index}
+              isEditing={isEditing}
+            />
+          )}
+          <TrashBtn deleteLink={deleteLink} link={link} />
         </div>
       </div>
     </div>

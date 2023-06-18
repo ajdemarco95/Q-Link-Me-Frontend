@@ -1,8 +1,15 @@
 import LinkCard from "./LinkCard";
 import { useState } from "react";
+
 function LinkContainer(props) {
-  const { linkArr } = props;
-  const [isEditing, setIsEditing] = useState(false);
+  const { linkArr, deleteLink, updateLink, addLink } = props;
+  const [editingStates, setEditingStates] = useState(linkArr.map(() => false));
+
+  const handleEditClick = (index) => {
+    const newEditingStates = [...editingStates];
+    newEditingStates[index] = !newEditingStates[index];
+    setEditingStates(newEditingStates);
+  };
 
   return (
     <div className="container">
@@ -10,8 +17,12 @@ function LinkContainer(props) {
         <LinkCard
           key={index}
           link={link}
-          isEditing={isEditing}
-          setIsEditing={setIsEditing}
+          isEditing={!editingStates[index]}
+          index={index}
+          handleEditClick={handleEditClick}
+          deleteLink={deleteLink}
+          updateLink={updateLink}
+          addLink={addLink}
         />
       ))}
       <button className="btn btn-primary btn-block mt-5">

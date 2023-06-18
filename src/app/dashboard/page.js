@@ -54,11 +54,26 @@ export default function page() {
 
   const [userLinks, setUserLinks] = useState(linkArr);
 
+  const deleteLink = (id) => {
+    const newLinkArr = userLinks.filter((link) => link.id != id);
+
+    setUserLinks(newLinkArr);
+  };
+
+  const updateLink = (id) => {};
+
+  const addLink = (data) => {};
+
   return (
     <>
       <div className="flex">
         <section className="w-6/12">
-          <LinkContainer linkArr={userLinks} />
+          <LinkContainer
+            linkArr={userLinks}
+            deleteLink={deleteLink}
+            updateLink={updateLink}
+            addLink={addLink}
+          />
         </section>
         <section className="flex w-6/12 justify-center">
           <PhoneContainer linkArr={userLinks} accountInfo={accountInfo} />

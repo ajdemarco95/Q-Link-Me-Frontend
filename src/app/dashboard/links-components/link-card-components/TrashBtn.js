@@ -1,8 +1,14 @@
 import React from "react";
 
-function TrashBtn() {
+function TrashBtn(props) {
+  const { deleteLink, link } = props;
   return (
-    <button className="hover:animate-btn-bounce-sm btn btn-outline btn-error ">
+    <button
+      className="hover:animate-btn-bounce-sm btn btn-outline btn-error "
+      onClick={() => {
+        deleteLink(link.id);
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
