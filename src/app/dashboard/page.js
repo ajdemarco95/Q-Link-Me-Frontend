@@ -6,36 +6,48 @@ import { useState } from "react";
 export default function page() {
   const linkArr = [
     {
-      desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
+      linkTitle: "Instagram",
+      desc: "Check out my Instagram lore laskdjfhaksdfhjkashdfkjakhjsdfhjkashjdfksjfkajfaksfhaksdjfasfakhs",
+      url: "www.instagram.com/instagram",
       id: 1,
     },
     {
-      desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
+      linkTitle: "Twitter",
+      desc: "Check out my twitter and all the cool things I have on it !",
+      url: "www.twitter.com/twitter",
       id: 2,
     },
     {
-      desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
+      linkTitle: "WhatsApp",
+      desc: "Check out my WhatsApp!",
+      url: "https://stackoverflow.com/questions/12710843/want-to-move-a-particular-div-to-right",
       id: 3,
     },
     {
+      linkTitle: "Telegram",
       desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
+      url: "https://stackoverflow.com/questions/12710843/want-to-move-a-particular-div-to-right",
       id: 4,
     },
     {
+      linkTitle: "Facebook",
       desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
+      url: "https://stackoverflow.com/questions/12710843/want-to-move-a-particular-div-to-right",
       id: 5,
     },
     {
+      linkTitle: "Calendly",
       desc: "Check out my Instagram lore",
-      url: "www.instagram.com/ajdemarco",
+      url: "https://stackoverflow.com/questions/12710843/want-to-move-a-particular-div-to-right",
       id: 6,
     },
   ];
+
+  const accountInfo = {
+    username: "ajdemarco95",
+    avatar: "URL",
+  };
+
   const [userLinks, setUserLinks] = useState(linkArr);
 
   return (
@@ -45,7 +57,7 @@ export default function page() {
           <LinkContainer linkArr={userLinks} />
         </section>
         <section className="flex w-6/12 justify-center">
-          <PhoneContainer linkArr={userLinks} />
+          <PhoneContainer linkArr={userLinks} accountInfo={accountInfo} />
         </section>
       </div>
     </>

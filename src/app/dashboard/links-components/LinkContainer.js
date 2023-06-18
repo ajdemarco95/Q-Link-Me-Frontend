@@ -15,9 +15,3 @@ function LinkContainer(props) {
 }
 
 export default LinkContainer;
-
-//   {
-//     linkArr.map((link, index) => (
-//       <LinkCard key={index} link={link} />
-//     ));
-//   }
