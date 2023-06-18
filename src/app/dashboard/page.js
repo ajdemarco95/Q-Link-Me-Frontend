@@ -64,21 +64,30 @@ export default function page() {
 
   const addLink = (data) => {};
 
-  return (
-    <>
-      <div className="flex">
-        <section className="w-6/12">
-          <LinkContainer
-            linkArr={userLinks}
-            deleteLink={deleteLink}
-            updateLink={updateLink}
-            addLink={addLink}
-          />
-        </section>
-        <section className="flex w-6/12 justify-center">
-          <PhoneContainer linkArr={userLinks} accountInfo={accountInfo} />
-        </section>
-      </div>
-    </>
-  );
+  if (userLinks.length) {
+    return (
+      <>
+        <div className="flex">
+          <section className="w-6/12">
+            <LinkContainer
+              linkArr={userLinks}
+              deleteLink={deleteLink}
+              updateLink={updateLink}
+              addLink={addLink}
+            />
+          </section>
+          <section className="flex w-6/12 justify-center">
+            <PhoneContainer linkArr={userLinks} accountInfo={accountInfo} />
+          </section>
+        </div>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <h1>Looks like you don't have any links yet!</h1>
+        <p>set some up now</p>
+      </>
+    );
+  }
 }

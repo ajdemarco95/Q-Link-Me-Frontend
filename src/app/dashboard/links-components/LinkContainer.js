@@ -1,9 +1,11 @@
 import LinkCard from "./LinkCard";
+import AddLinkCard from "./link-card-components/AddLinkCard";
 import { useState } from "react";
 
 function LinkContainer(props) {
   const { linkArr, deleteLink, updateLink, addLink } = props;
   const [editingStates, setEditingStates] = useState(linkArr.map(() => false));
+  const [isAddingLink, setIsAddingLink] = useState(true);
 
   const handleEditClick = (index) => {
     const newEditingStates = [...editingStates];
@@ -25,6 +27,11 @@ function LinkContainer(props) {
           addLink={addLink}
         />
       ))}
+      {isAddingLink && (
+        <>
+          <AddLinkCard />
+        </>
+      )}
       <button className="btn btn-primary btn-block mt-5">
         Add new link...
       </button>
