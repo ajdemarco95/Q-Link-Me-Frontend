@@ -10,6 +10,10 @@ export default function page() {
       desc: "Check out my Instagram lore laskdjfhaksdfhjkashdfkjakhjsdfhjkashjdfksjfkajfaksfhaksdjfasfakhs",
       url: "www.instagram.com/instagram",
       id: 1,
+      isPrivate: "false",
+      thumb: {
+        src: "https://www.site.com/img.jpeg",
+      },
     },
     {
       linkTitle: "Twitter",

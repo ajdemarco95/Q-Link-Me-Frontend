@@ -87,7 +87,7 @@ function LinkCard(props) {
           </div>
         </div>
         <div className="actions ml-auto">
-          <button className="btn btn-outline btn-warning mr-3 scale-75">
+          <button className="hover:animate-btn-bounce-sm btn btn-outline btn-warning mr-3 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -103,7 +103,7 @@ function LinkCard(props) {
               />
             </svg>
           </button>
-          <button className="btn btn-outline btn-error scale-75">
+          <button className="hover:animate-btn-bounce-sm btn btn-outline btn-error ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
