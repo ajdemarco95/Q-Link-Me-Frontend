@@ -10,10 +10,12 @@ export default function page() {
       desc: "Check out my Instagram lore laskdjfhaksdfhjkashdfkjakhjsdfhjkashjdfksjfkajfaksfhaksdjfasfakhs",
       url: "www.instagram.com/instagram",
       id: 1,
-      isPrivate: "false",
+      isHidden: false,
       thumb: {
         src: "https://www.site.com/img.jpeg",
       },
+      sectionType: "button",
+      isLocked: false,
     },
     {
       linkTitle: "Twitter",
@@ -29,7 +31,7 @@ export default function page() {
     },
     {
       linkTitle: "Telegram",
-      desc: "Check out my Instagram lore",
+      desc: "Telegram",
       url: "https://stackoverflow.com/questions/12710843/want-to-move-a-particular-div-to-right",
       id: 4,
     },

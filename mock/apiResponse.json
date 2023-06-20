@@ -1,0 +1,57 @@
+[
+  {
+    "accountInfo": {
+      "username": "ajdemarco95",
+      "email": "ajdemarco95@gmail.com",
+      "subscriptionStatus": "subscribed",
+      "accountType": "premium",
+      "avatar": {
+        "image": {
+          "url": "www.google.com"
+        }
+      }
+    }
+  },
+  {
+    "links": [
+      {
+        "linkTitle": "Instagram",
+        "desc": "Check out my Instagram for special updates!",
+        "url": "www.instagram.com/instagram",
+        "id": 1,
+        "isHidden": false,
+        "thumb": {
+          "src": "https://www.site.com/img.jpeg"
+        },
+        "sectionType": "button",
+        "isLocked": false
+      },
+      {
+        "linkTitle": "Instagram",
+        "desc": "Check out my Twitter for a brand new sale!",
+        "url": "www.instagram.com/instagram",
+        "id": 1,
+        "isHidden": false,
+        "thumb": {},
+        "sectionType": "button",
+        "isLocked": false
+      }
+    ]
+  },
+  {
+    "customStyle": {
+      "socialLinkStyle": {
+        "style": "solid",
+        "color": "blue"
+      },
+      "backgroundStyle": {
+        "style": "solid",
+        "color": "grey"
+      },
+      "button": {
+        "backgroundStyle": "solid",
+        "backgroundColor": "red"
+      }
+    }
+  }
+]
